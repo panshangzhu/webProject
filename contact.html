@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html dir="ltr">
+
+<!-- #BeginTemplate "projecctAssignment.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- #BeginEditable "doctitle" -->
+<title>Contact Us</title>
+<!-- #EndEditable -->
+<style>
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.allPage{
+   width:980px;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+}
+#header{
+    background-image: url('images/header2.jpg');
+    border-radius:10px;
+    position:relative;
+    width:980px;
+    height:100px;    
+}
+#logo{
+    position:absolute;
+    transform:scale(0.4);
+    left:-40px;
+    top:-35px;  
+}
+.nav{
+    position:absolute;
+    top:65px;
+    right:10px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    list-style: none;
+}
+.nav a{
+    color:white;
+    text-decoration: none;
+}
+.nav li{
+    position:relative;
+    float: left;
+    width:110px;
+    height:35px;
+    padding:0px 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align:center;
+    line-height:35px;
+    white-space:nowrap;
+    border-radius: 5px;
+}
+.nav li ul{
+    list-style:none;
+    position:absolute;
+    left:0px;  
+    
+}
+.nav .home{
+    background-color: lightblue;
+}
+.nav li:hover{
+    background-color: lightblue;
+}
+.nav li ul li{
+    display:none;
+}
+.nav li:hover ul li{
+    display:block;
+    border-radius: 0px;
+}
+
+#sidebar{
+    position: absolute;
+    width:118px;
+    height:600px;
+    background-color:lightblue;
+    border-radius: 5px;
+    top:100px;
+    left:0px;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap:5px;
+    justify-content: center;
+    align-items: center;
+    padding-top:2px;
+    box-sizing: border-box;
+    border-left:1px solid lightblue;
+    border-right:1px solid lightblue;
+}
+.container{
+    width:100%;
+    height:100%;
+    background-color: white;
+    text-align:center;
+    font-size:0.7em;
+    position:relative;
+    
+    
+}
+.container img{
+    width:110px;
+    height:110px;
+    object-fit: cover;
+    transition: all 0.2s ease-in; 
+    -webkit-transition:all 0.2s ease-in;
+    -moz-transition:all 0.2s ease-in;
+    -o-transition:all 0.2s ease-in;
+}
+.container p a{
+    text-decoration: none;
+    color:white;
+   
+}
+.container p{
+    font-size: 1.5em;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:5px;
+    background: lightblue;
+    border-radius: 3px;
+    display:none;
+    
+    
+}
+.container:hover img{
+    filter: opacity(0.6) blur(3px);
+    -webkit-filter: opacity(0.6) blur(3px);
+    -moz--filter: opacity(0.6) blur(3px);
+    -o-filter: opacity(0.6) blur(3px);
+}
+.container:hover p{
+    display:block;
+}
+.content-bar{
+    position:absolute;
+    width:850px;
+    height:600px;
+    top:100px;
+    left:120px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.0em;
+    z-index: -1;
+    background-color:rgba(158, 207, 223,0.5);
+}
+fieldset{
+    position: absolute;
+    left:250px;
+    top:10px;
+    width:400px;
+    height:96%;
+    border:solid 2px grey;   
+}
+legend{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:brown;
+    }
+table{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+table tr{
+    height:40px;
+    
+}
+table td{
+    width:190px;
+    
+}
+input[type="submit"]{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width:100px;
+    height:50px;
+    border:none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color:rgba(226, 239, 243,0.7);
+    outline: none;
+    border-radius: 20%;
+    cursor: pointer;
+    float:right;
+}
+input[type="reset"]{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width:100px;
+    height:50px;
+    border:none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color:rgba(226, 239, 243,0.7);
+    outline: none;
+    border-radius:20%;
+    cursor: pointer;
+}
+
+
+
+
+
+.footer{
+    position: absolute;
+    width:980px;
+    height:50px;
+    top:700px;
+    left:0px;
+    background-color: rgb(186, 221, 233);
+    border-radius:10px;
+    box-sizing: border-box;
+    display:flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding:0px 10px;
+    margin-top:10px;
+}
+.footer .contact span{
+    padding: 0px 5px;
+    
+}
+.footer .contact span a{
+    text-decoration: none;
+    color:black;
+    padding:2px;
+}
+.footer .contact span a:hover{
+    background-color: whitesmoke;
+    border-radius: 10%;
+}
+.socialMedia img{ 
+    padding:0px 5px;
+}
+</style>
+</head>
+
+<body>
+<div class="allPage">
+    <div id="header">
+        <div id="logo">
+            <img id="logo" src="images/logo.png" alt="logo">
+        </div>
+
+            <ul class="nav">
+                <li class="home"><a href="home.html">Home</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="#">Porperties</a>
+                   <ul>
+                    <li>
+					<a href="house01.html">House01</a></li>
+                    <li>
+					<a href="house02.html">House02</a></li>
+                    <li>
+					<a href="house03.html">House03</a></li>
+                    <li>
+					<a href="house04.html">House04</a></li>
+                    <li>
+					<a href="house05.html">House05</a></li>
+                    </ul>                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reference.html">Site and Credit</a></li>
+            </ul>
+    </div>
+
+
+     <div id="sidebar">
+     <div class="container" id="container1">
+         <div class="picture" id="picture1">
+             <img src="images/house01/01-110.jpg" alt="house01">
+             <p>
+			 <a href="house01.html">House01</a></p>
+         </div>
+    </div>
+
+    <div class="container" id="container2">
+         <div class="picture" id="picture2">
+             <img src="images/house02/01-110.jpg" alt="house02">
+             <p>
+			 <a href="house02.html">House02</a></p>
+         </div>
+     </div>
+
+     <div class="container" id="container3">
+         <div class="picture" id="picture3">
+             <img src="images/house03/01-110.jpg" alt="house03">
+             <p>
+			 <a href="house03.html">House03</a></p>
+         </div>
+     </div>
+
+     <div class="container" id="container4">
+         <div class="picture" id="picture4">
+             <img src="images/house04/01-110.jpg" alt="house04">
+             <p>
+			 <a href="house04.html">House04</a></p>
+         </div>
+    </div>
+
+    <div class="container" id="container5">
+         <div class="picture" id="picture5">
+             <img src="images/house05/01-110.jpg" alt="house05">
+             <p>
+			 <a href="house05.html">House05</a></p>
+         </div>  
+    </div>
+    </div>   
+<!-- #BeginEditable "body" -->
+<div class="content-bar">
+<fieldset><legend>&nbsp; Contact Us &nbsp; &nbsp;  </legend>
+<form action="mailto:yipanwang@mycentennialcollege.ca" method="POST">
+<table>
+    <tr>
+        <td>
+    <label for="firstName">First Name:</label>
+    </td>
+        <td>
+    <input type="text" id="firstName" name="firstName" size="25"></td>
+    </tr>
+    <tr>
+        <td>
+    <label for="lastName">Last Name:</label></td>
+        <td>
+    <input type="text" id="lastName" name="lastName" size="25"></td>
+    </tr>
+    <tr>
+        <td>
+    <label for="phone">Phone Number:</label></td>
+        <td>
+    <input type="tel" id="phone" name="phone" size="25"></td>
+    </tr>
+    <tr>
+        <td>
+    <label for="email">Email Address:</label></td>
+        <td>
+    <input type="email" id="email" name="email" size="25" placeholder="xxxx@xxx.com"></td>
+    </tr>
+    <tr>
+        <td>
+    <label for="typeA">Type of Property</label>
+    </td>
+        <td>
+    <input type="checkbox" id="typeA" name="type1" value="appa">Appartment
+    <input type="checkbox" id="typeV" name="type2" value="villa">Villa
+    <input type="checkbox" id="typeH" name="type" value="house">House
+        </td>
+    </tr>
+    <tr>
+        <td>
+    <label for="noOfBedroom">Number of Bedroom</label></td>
+        <td>
+    <input type="text" id="noOfBedroom" name="noOfBedroom" list="numbers">
+    <datalist id="numbers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="4+">4+</option>
+    </datalist>
+    </td>
+    </tr>
+    <tr>
+        <td>
+    <label for="noOfBathroom">Number of Bathroom</label></td>
+        <td>
+    <input type="text" id="noOfBathroom" name="noOfBathroom" list="numbers"></td>
+    </tr>
+    <tr>
+        <td>
+    <label for="rangePrice">The maximum Price</label></td>
+        <td>
+    <input type="range" id="rangePrice" name="rangePrice" min="0" max="2200000" value="rangePrice"
+    oninput="amount.value=rangePrice.value">                   
+     <output id="amount" name="amount" for="rangePrice">0</output>
+    </td>
+    </tr>
+    <tr>
+        <td>
+    <label for="comments">Comments</label></td>
+        <td>
+    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Please let us know yor special requests"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+    <input type="submit" id="submit" value="Contact us"></td>
+        <td>
+    <input type="reset" id="clear" value="write it again"></td>
+    </tr>
+</table>
+</form>
+</fieldset> 
+</div>
+
+<!-- #EndEditable -->
+<div class="footer">
+       
+         <div class="contact">
+             <p><span><a href="#">Contact Us</a></span><span>
+             <a href="#">FAQ </a></span>
+             <span><a href="#">Privacy Policy</a></span>
+             <span><a href="#">Terms of Use</a></span>
+             <span><a href="#">SiteMap</a></span></p>
+         </div>
+         <div class="socialMedia">
+                <a href="#">
+				<img src="images/socialMedia/facebook.png" width="20px" height="20px" alt="facebook"></a>
+                <a href="#">
+				<img src="images/socialMedia/twitter.png"width="20px" height="20px" alt="twitter"></a>
+                <a href="#">
+				<img src="images/socialMedia/wechat.png" width="20px" height="20px" alt="wechat"></a>
+                <a href="#">
+				<img src="images/socialMedia/weibo.png" width="20px" height="20px" alt="weibo"></a>
+        </div>
+    </div>
+</div>      
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
