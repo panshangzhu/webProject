@@ -6,10 +6,17 @@
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panshangzhu/webProject.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage":"https://panshangzhu.github.io/webproject",
+  "homepage": "https://panshangzhu.github.io/webproject",
+  "bugs": {
+    "url": "https://github.com/panshangzhu/webProject/issues"
+  },
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
